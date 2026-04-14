@@ -1,5 +1,3 @@
-import time
-import sys
 import random
 from colorama import Fore, Style, init
 
@@ -8,15 +6,6 @@ init(autoreset=True)
 print(Fore.CYAN + "="*35)
 print(Fore.YELLOW + " WELCOME TO LUCKY DRAW ")
 print(Fore.CYAN + "="*35)
-
-def loading():
-    for j in range(2):
-        for i in range(3):
-            sys.stdout.write('\r')
-            sys.stdout.write(Fore.CYAN + 'Loading ' + '.' * (i + 1))
-            sys.stdout.flush()
-            time.sleep(0.5)
-    print()  # move cursor to new line
 
 def luckydraw():
     a = int(input(Fore.YELLOW + "\nEnter the number between 10 to 20 : "))
@@ -27,7 +16,6 @@ def luckydraw():
 
         if (a == selected):
 
-            loading()
             print(Fore.GREEN + "-"*35)
             print(Fore.GREEN + "CONGRATULATIONS")
             print(Fore.GREEN + "-"*35)
@@ -59,7 +47,6 @@ def luckydraw():
                 print(Fore.MAGENTA + "*"*35)
 
         else:
-            loading()
             print(Fore.RED + "-"*35)
             print(Fore.RED + "OOPS! TRY NEXT TIME ")
             print(Fore.RED + "-"*35)
